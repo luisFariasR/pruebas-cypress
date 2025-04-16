@@ -47,6 +47,7 @@ describe("visita-auth", () => {
     cy.get("#Buscar").should('exist').click();
     cy.wait(5000);
     cy.get("#tipoId", { timeout: 15000 }).should("be.visible").select("INE");
+    cy.wait(1000)
 
     cy.get("#nameV", { timeout: 10000 }).type("Guadalupe");
     cy.get("#aPatV").type("Kent");
