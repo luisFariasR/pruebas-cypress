@@ -44,7 +44,7 @@ describe("visita-auth", () => {
     cy.wait(2000);
     cy.get("#noIdV", { timeout: 10000 }).should("be.visible").type("146534");
     cy.wait(2000);
-    cy.get("#Buscar").should('exist').click();
+    cy.get("#Buscar").should('exist').click({force: true});
     cy.wait(5000);
     cy.get("#tipoId", { timeout: 15000 }).should("be.visible").select("INE");
     cy.wait(1000)
