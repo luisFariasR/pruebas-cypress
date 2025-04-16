@@ -62,7 +62,8 @@ describe("visita-auth", () => {
       .within(() => {
         cy.get("select", { timeout: 10000 }).select("fake_device_0");
         cy.wait(2000);
-        cy.get("svg", { timeout: 10000 }).click();
+        cy.get('svg[aria-label="camera"]',{ timeout: 10000 }).click({force: true})
+
         cy.wait(2000);
         cy.contains("title", "Guardar", { timeout: 10000 })
           .parent()
